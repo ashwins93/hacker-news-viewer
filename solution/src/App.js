@@ -12,13 +12,13 @@ class App extends Component {
         <Helmet>
           <title>Hacker News Viewer</title>
           <link
-            href="https://fonts.googleapis.com/css?family=Lato|Open+Sans"
+            href="https://fonts.googleapis.com/css?family=Lato|Roboto"
             rel="stylesheet"
           />
         </Helmet>
         <div className="app">
           {this.state.topStories.map(story => (
-            <Story story={this.state.stories[story]} />
+            <Story key={story} story={this.state.stories[story]} />
           ))}
         </div>
       </>
