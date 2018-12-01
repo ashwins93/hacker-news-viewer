@@ -1,12 +1,28 @@
 import React, { Component } from 'react';
-import data from './mock_data';
+import { Helmet } from 'react-helmet';
 import mock_data from './mock_data';
+import Story from './components/Story';
 
 class App extends Component {
   state = mock_data;
 
   render() {
-    return <div>Hello World</div>;
+    return (
+      <>
+        <Helmet>
+          <title>Hacker News Viewer</title>
+          <link
+            href="https://fonts.googleapis.com/css?family=Lato|Open+Sans"
+            rel="stylesheet"
+          />
+        </Helmet>
+        <div className="app">
+          {this.state.topStories.map(story => (
+            <Story story={this.state.stories[story]} />
+          ))}
+        </div>
+      </>
+    );
   }
 }
 

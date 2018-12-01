@@ -14,7 +14,14 @@ body {
 
 body {
   padding: 30px;
-  color: grey;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Lato", sans-serif;
 }
 
 /*# sourceMappingURL=index.css.map */
